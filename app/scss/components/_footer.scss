@@ -1,0 +1,71 @@
+@use '../globals/variables' as *;
+@use '../util' as *;
+@use 'sass:math';
+
+footer {
+	background-color: $c-extra-grey;
+}
+
+.footer {
+	&__container {
+      text-align: center;
+		padding: rem(46) rem(32);
+
+		@include breakpoint-up(md) {
+			display: flex;
+			justify-content: space-between;
+         text-align: left;
+		}
+	}
+
+	.logo {
+		@include breakpoint-up(md) {
+			margin-bottom: 0;
+		}
+		img {
+			width: 60px;
+		}
+	}
+
+	&__links {
+		@include breakpoint-up(md) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+
+			column-gap: rem(40);
+			row-gap: rem(15);
+		}
+
+		@include breakpoint-up(lg) {
+			column-gap: rem(90);
+		}
+
+		a {
+			display: block;
+			margin-bottom: rem(45);
+
+			@include breakpoint-up(md) {
+				margin-bottom: 0;
+			}
+
+			color: $c-dark-grayish-blue;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: rem(20);
+
+ 		a {
+			display: inline-block;
+			width: rem(25);
+			height: rem(25);
+		}
+	}
+}

@@ -1,0 +1,107 @@
+@use 'variables' as *;
+@use '../util' as *;
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-size: 1rem;
+	font-weight: 400;
+	font-family: $font-primary;
+	color: $c-grayish-blue;
+
+	// @include breakpoint-up(md) {
+	//   font-size: 1rem;
+	// }
+
+	// @include breakpoint-up(lg) {
+	//   font-size: 1.125rem;
+	// }
+}
+
+/************* HEADLINES *************/
+
+h1,
+h2,
+h3 {
+	margin-top: 0;
+	font-weight: 600;
+	color: $c-dark-grayish-blue;
+}
+
+h1 {
+	font-size: 1.5rem;
+
+	@include breakpoint-up(md) {
+		font-size: 2rem;
+	}
+
+	@include breakpoint-up(lg) {
+		font-size: 2.75rem;
+	}
+
+	margin-bottom: rem(25);
+}
+
+h2 {
+	font-size: 1.25rem;
+
+	@include breakpoint-up(md) {
+		font-size: 1.7rem;
+	}
+
+	@include breakpoint-up(lg) {
+		font-size: 2.125rem;
+	}
+
+	margin-bottom: 1rem;
+}
+
+h3 {
+	font-size: 1rem;
+
+	@include breakpoint-up(md) {
+		font-size: 1.2rem;
+	}
+
+	@include breakpoint-up(lg) {
+		font-size: 1.5rem;
+	}
+
+	margin-bottom: 1rem;
+}
+
+/************* ANCHORS *************/
+
+a,
+a:visited,
+a:active {
+	text-decoration: none;
+}
+
+/************* PARAGRAPHS *************/
+
+p.large {
+	font-size: 1.25rem;
+}
+
+p.medium {
+	font-size: 1rem;
+	line-height: 1.5;
+
+	@include breakpoint-up(lg) {
+		font-size: 1.125rem;
+		line-height: 1.75;
+	}
+}
+
+p.small {
+	font-size: 1rem;
+   line-height: 1.75;
+   max-width: 400px;
+}
+
+p {
+	margin-top: 0;
+}

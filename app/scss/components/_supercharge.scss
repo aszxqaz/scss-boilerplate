@@ -1,0 +1,35 @@
+@use '../util' as *;
+
+.supercharge {
+   .content {
+      margin-bottom: rem(50);
+   }
+
+	&__columns {
+		@include breakpoint-up(lg) {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			column-gap: rem(20);
+		}
+	}
+
+	&__column {
+		margin-bottom: 60px;
+		@include breakpoint-up(lg) {
+		}
+	}
+
+	&__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		height: rem(48);
+
+      margin-bottom: rem(20);
+
+		@include breakpoint-up(lg) {
+			margin-bottom: rem(35);
+		}
+	}
+}

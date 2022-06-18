@@ -1,0 +1,15 @@
+@use '../globals' as *;
+@use '../util' as *;
+
+.hero {
+	padding-top: rem(20);
+
+	@include breakpoint-up(md) {
+		padding-top: rem(70);
+	}
+
+	&__logo {
+		margin-block: rem(70);
+	}
+
+}

@@ -1,0 +1,50 @@
+@use '../util' as *;
+
+.snippets {
+	&__content {
+		position: relative;
+		width: 100%;
+
+		@include breakpoint-up(lg) {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__image,
+	&__features {
+		@include breakpoint-up(lg) {
+			flex: 1;
+		}
+	}
+
+	&__image {
+		margin-bottom: rem(60);
+
+		@include breakpoint-up(lg) {
+			margin-bottom: 0;
+		}
+
+		img {
+			width: 100%;
+			max-width: 500px;
+
+			@include breakpoint-up(lg) {
+				transform: translateX(rem(-55));
+				max-width: none;
+			}
+		}
+	}
+
+	&__features {
+		@include breakpoint-up(lg) {
+			text-align: left;
+			margin-left: rem(55);
+		}
+
+		> p {
+			display: inline-block;
+			max-width: 340px;
+		}
+	}
+}

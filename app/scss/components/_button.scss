@@ -1,0 +1,57 @@
+@use '../util' as *;
+@use '../globals' as *;
+
+button,
+.button {
+	position: relative;
+  width: 100%;
+
+  @include breakpoint-up(md) {
+    width: initial;
+  }
+
+	border-radius: rem(30);
+	color: #fff;
+	font-size: rem(14);
+	padding: rem(14) rem(40);
+	transition: all 100ms ease-in-out;
+
+	&.cyan {
+		background-color: $c-cyan;
+		border-bottom: rem(3) solid $c-cyan;
+
+		&:hover {
+			background-color: lighten($c-cyan, 4%);
+			box-shadow: 0px 5px 12px rgba(darken($c-cyan, 10%), 0.2);
+		}
+	}
+  
+	&.blue {
+    background-color: $c-light-blue;
+		border-bottom: rem(3) solid $c-light-blue;
+    
+		&:hover {
+      background-color: lighten($c-light-blue, 4%);
+      box-shadow: 0px 5px 12px rgba(darken($c-light-blue, 10%), 0.2);
+		}
+	}
+}
+
+.cta-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   @include breakpoint-up(md) {
+      display: block;
+   }
+
+   button:first-of-type {
+      margin-bottom: rem(20);
+
+      @include breakpoint-up(md) {
+         margin-bottom: initial;
+         margin-right: 1rem;
+      }
+   }
+}

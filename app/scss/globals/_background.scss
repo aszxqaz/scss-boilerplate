@@ -1,0 +1,11 @@
+@use '../util' as *;
+
+body {
+	background-image: url('/images/bg-header-mobile.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	@include breakpoint-up(md) {
+		background-image: url('/images/bg-header-desktop.png');
+	}
+}
